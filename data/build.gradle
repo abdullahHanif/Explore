@@ -43,7 +43,6 @@ android {
     flavorDimensions "default"
     productFlavors {
         development {
-            applicationIdSuffix ".dev"
             resValue "string", "app_label", "Explore Development"
             buildConfigField "String", "BASE_URL", "\"https://pixabay.com/\""
             buildConfigField "String", "API_KEY", "\"6729371-f2d9816057da7e528b2e0b8a2\""

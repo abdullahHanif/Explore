@@ -1,5 +1,7 @@
 package com.al.data.repository
 
+import android.content.Context
+import android.widget.Toast
 import com.al.data.datasource.local.image.ImageLocalDataSource
 import com.al.data.datasource.remote.network.image.ImageRemoteDataSource
 import com.al.data.mapper.ImageMapper
@@ -11,8 +13,10 @@ import javax.inject.Inject
 
 class ExploreImagesRepositoryImpl @Inject constructor(
     private val localSource: ImageLocalDataSource,
-    private val remoteDataSource: ImageRemoteDataSource
+    private val remoteDataSource: ImageRemoteDataSource,
+    private val context: Context
 ) : ExploreImagesRepository {
+
     @Throws(Exception::class)
     override suspend fun fetchImages(pageNo: Int): Flow<List<ImageEntity>> = flow {
         val lst = ArrayList<ImageEntity>()
@@ -22,13 +26,14 @@ class ExploreImagesRepositoryImpl @Inject constructor(
             localSource.deleteAll()
             localSource.saveAll(data.hits)
 
+            //mapping it into domain type pojo convention and emit
             localSource.getImages(pageNo).forEach {
                 lst.add(ImageMapper.fromDataToDomainType(it))
             }
 
             emit(lst)
         } catch (exception: Exception) {
-            emit(lst)
+            Toast.makeText(context, "$exception.localizedMessage", Toast.LENGTH_LONG).show()
         }
     }
 

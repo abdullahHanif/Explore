@@ -3,9 +3,9 @@ package com.al.data.db
 import androidx.room.Database
 import androidx.room.RoomDatabase
 import com.al.data.db.dao.ImageDao
-import com.al.data.model.ImageResponse
+import com.al.data.model.Image
 
-@Database(entities = [ImageResponse::class], version = 1, exportSchema = false)
+@Database(entities = [Image::class], version = 1, exportSchema = false)
 abstract class  ExploreDatabase : RoomDatabase() {
     abstract fun imageDao(): ImageDao
 
