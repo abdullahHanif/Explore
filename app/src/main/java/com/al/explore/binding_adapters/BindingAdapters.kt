@@ -4,7 +4,7 @@ import android.graphics.drawable.Drawable
 import android.util.Log
 import android.widget.ImageView
 import androidx.databinding.BindingAdapter
-import com.al.explore.R
+import androidx.swiperefreshlayout.widget.CircularProgressDrawable
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.DataSource
 import com.bumptech.glide.load.engine.DiskCacheStrategy
@@ -14,12 +14,17 @@ import com.bumptech.glide.request.target.Target
 
 @BindingAdapter(value = ["image_url"])
 fun ImageView.loadImage(imageUrl: String?) {
+    val circularProgressDrawable = CircularProgressDrawable(context)
+    circularProgressDrawable.strokeWidth = 3f
+    circularProgressDrawable.centerRadius = 15f
+    circularProgressDrawable.start()
+
     Glide.with(context)
         .load(imageUrl ?: "")
         .skipMemoryCache(true)
         .diskCacheStrategy(DiskCacheStrategy.ALL)
         .thumbnail(0.1f)
-        .placeholder(R.drawable.ic_placeholder)
+        .placeholder(circularProgressDrawable)
         .addListener(object : RequestListener<Drawable> {
             override fun onLoadFailed(
                 e: GlideException?,
