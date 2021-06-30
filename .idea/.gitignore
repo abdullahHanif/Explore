@@ -1,0 +1,11 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+/.name
+/compiler.xml
+/gradle.xml
+/jarRepositories.xml
+/misc.xml
+/vcs.xml
+/codeStyles/codeStyleConfig.xml
+/codeStyles/Project.xml
