@@ -40,9 +40,9 @@ class ImageGalleryViewModel @Inject constructor(private val fetchImageCase: Fetc
                         events.value = BaseEvent(ImageGalleryEvents.NoDataFound)
                 }.collect {
                     isLoading = false
-                    hasLoadedAllItems = (it.size / perPage) <= pageNo
+                    hasLoadedAllItems = (it.totalHits / perPage) <= pageNo
 
-                    imageList.addAll(it)
+                    imageList.addAll(it.hits)
                     pageNo++
                     events.value = BaseEvent(ImageGalleryEvents.NotifyChanges)
 
