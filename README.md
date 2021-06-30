@@ -1,7 +1,7 @@
-# Fun-Apps
-Let the fun begin.
+# Explore
+Explore, dusk till dawn.
 
-Fun-Apps is simple App listing app that fetches channel and social apps.
+Explore is simple App gallery app that display you crisp and vivid photos.
 
 # Developed using Clean Architecture, MVVM, Hilt, Kotlin, Data Binding, Coroutines, LiveData and Flow
 
