@@ -1,7 +1,5 @@
 package com.al.data.repository
 
-import android.content.Context
-import android.widget.Toast
 import com.al.data.datasource.local.image.ImageLocalDataSource
 import com.al.data.datasource.remote.network.image.ImageRemoteDataSource
 import com.al.data.mapper.ImageMapper
@@ -13,8 +11,7 @@ import javax.inject.Inject
 
 class ExploreImagesRepositoryImpl @Inject constructor(
     private val localSource: ImageLocalDataSource,
-    private val remoteDataSource: ImageRemoteDataSource,
-    private val context: Context
+    private val remoteDataSource: ImageRemoteDataSource
 ) : ExploreImagesRepository {
 
     @Throws(Exception::class)
@@ -33,7 +30,7 @@ class ExploreImagesRepositoryImpl @Inject constructor(
 
             emit(lst)
         } catch (exception: Exception) {
-            Toast.makeText(context, "$exception.localizedMessage", Toast.LENGTH_LONG).show()
+            //Toast.makeText(context, "$exception.localizedMessage", Toast.LENGTH_LONG).show()
         }
     }
 

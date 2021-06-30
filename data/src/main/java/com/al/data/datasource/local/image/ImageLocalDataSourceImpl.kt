@@ -3,9 +3,7 @@ package com.al.data.datasource.local.image
 import com.al.data.db.dao.ImageDao
 import com.al.data.model.Image
 import javax.inject.Inject
-import javax.inject.Singleton
 
-@Singleton
 class ImageLocalDataSourceImpl @Inject constructor(private val imageDao: ImageDao) :
     ImageLocalDataSource {
 

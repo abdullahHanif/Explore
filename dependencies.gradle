@@ -68,4 +68,8 @@ ext {
 
     /*junit version*/
     junit = "4.13.2"
+
+    paginate_version = "1.0.0"
+
+    stfalcon_version = "1.0.1"
 }

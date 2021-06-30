@@ -16,7 +16,7 @@ android {
 
     defaultConfig {
         applicationId "com.al.explore"
-        minSdkVersion 23
+        minSdkVersion 26
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
@@ -54,12 +54,12 @@ android {
             applicationIdSuffix ".dev"
             resValue "string", "app_label", "Explore Development"
             buildConfigField "String", "BASE_URL", "\"https://pixabay.com/\""
-            buildConfigField "String", "API_KEY", "\"6729371-f2d9816057da7e528b2e0b8a2\""
+            buildConfigField "String", "API_KEY", "\"22300346-20fad2d649f9835e723773252\""
         }
         production {
             resValue "string", "app_label", "Explore"
             buildConfigField "String", "BASE_URL", "\"https://pixabay.com/\""
-            buildConfigField "String", "API_KEY", "\"6729371-f2d9816057da7e528b2e0b8a2\""
+            buildConfigField "String", "API_KEY", "\"22300346-20fad2d649f9835e723773252\""
         }
     }
 }
@@ -120,6 +120,12 @@ dependencies {
 
     //av loading
     implementation "com.wang.avi:library:$loader_version"
+
+    //pagination
+    implementation "com.github.markomilos:paginate:$paginate_version"
+
+    //Imageviewer
+    implementation "com.github.stfalcon:stfalcon-imageviewer:$stfalcon_version"
 
     // For local unit tests
     testImplementation "com.google.dagger:hilt-android-testing:$hilt_version"

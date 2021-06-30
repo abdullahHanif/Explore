@@ -11,6 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:name = ".AppClass"
+        android:networkSecurityConfig="@xml/network_security_config"
         android:theme="@style/Theme.Explore">
         <activity android:name=".view.view.HomeActivity">
             <intent-filter>

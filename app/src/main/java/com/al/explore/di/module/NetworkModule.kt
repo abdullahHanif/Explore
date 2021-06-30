@@ -27,8 +27,7 @@ object NetworkModule {
         builder.readTimeout(30, TimeUnit.SECONDS)
             .writeTimeout(30, TimeUnit.SECONDS)
             .connectTimeout(30, TimeUnit.SECONDS)
-
-        builder.addInterceptor(httpLoggingInterceptor)
+            .addInterceptor(httpLoggingInterceptor)
         return builder.build()
     }
 
@@ -40,7 +39,7 @@ object NetworkModule {
     @Singleton
     @Provides
     fun provideHttpLoggingInterceptor(): HttpLoggingInterceptor {
-        return HttpLoggingInterceptor().apply {
+        return HttpLoggingInterceptor().apply{
             level = HttpLoggingInterceptor.Level.BODY
         }
     }
