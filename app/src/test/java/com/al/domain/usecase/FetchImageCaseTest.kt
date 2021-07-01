@@ -4,6 +4,7 @@ import app.cash.turbine.test
 import com.al.domain.mock_data.MockUtil
 import com.al.domain.repository.ExploreImagesRepository
 import com.nhaarman.mockitokotlin2.mock
+import com.nhaarman.mockitokotlin2.verify
 import com.nhaarman.mockitokotlin2.whenever
 import kotlinx.coroutines.runBlocking
 import org.junit.Assert
@@ -32,9 +33,8 @@ class FetchImageCaseTest {
 
         whenever((FetchImageCase(imageRepo).invoke(1))).thenReturn(mockData)
 
-        val fetchedDataFlow = FetchImageCase(imageRepo).invoke(1).test(2.seconds) {
-            val item = requireNotNull(expectItem())
-            Assert.assertEquals(item, mockData)
+        val fetchedDataFlow = FetchImageCase(imageRepo).invoke(1).test(0.seconds) {
+            Assert.assertEquals(mockData, expectItem())
             expectComplete()
         }
 
@@ -43,5 +43,13 @@ class FetchImageCaseTest {
             // runBlocking should return Unit
         }
 
+    }
+
+    @ExperimentalTime
+    @Test
+    fun `check if method called`() = runBlocking {
+        whenever((FetchImageCase(imageRepo).invoke(1))).thenReturn(imageRepo.fetchImages(1))
+        sut.invoke(1)
+        verify(imageRepo.fetchImages(1))
     }
 }
