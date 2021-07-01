@@ -5,7 +5,7 @@ This example was created to demostrate and explaining about how to architect an 
 
 ![image](https://github.com/abdullahHanif/Explore/blob/master/explore_demo.jpg)
 
-Libraries and pattern used in this project
+Libraries and patterns used in this project
 ------------------------------------
 * AppCompat, AndroidX, RecyclerView, Glide, DesignLibrary, Paginate, Imageviewer
 * Kotlin Coroutines, Kotlin Flow, Retrofit, OkHttp
@@ -13,6 +13,7 @@ Libraries and pattern used in this project
 * LiveData Viewmodel, Room
 * Repository Pattern
 * Junit,Mockito
+* Multi module app, Presentation, Domain, Data
 
 
 Do you want to contribute?
