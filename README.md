@@ -5,9 +5,9 @@ Explore is simple App gallery app that display you crisp and vivid photos.
 
 # Developed using Clean Architecture, MVVM, Hilt, Kotlin, Data Binding, Coroutines, LiveData and Flow
 
-![image](https://github.com/abdullahHanif/Explore/blob/master/Explore Demo.jpg)
+![image](https://github.com/abdullahHanif/Explore/blob/master/ExploreDemo.jpg)
 
-# Architecture:
+# Architecture:Cancel changes
 Project is developed using Uncle bob's CLEAN ARCHITECTURE.
 
 Project is divided into three layers:
