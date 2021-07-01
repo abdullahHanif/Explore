@@ -1,36 +1,46 @@
-# Explore
-Explore, dusk till dawn.
+# Clean Architecture on Android. (Explore) 
 
-Explore is simple App gallery app that display you crisp and vivid photos.
+Example Android Clean Architecture used to explain how to use this architecture (rules) in our android applications.
+This example was created to demostrate and explaining about how to architect an android application using Uncle Bob's clean architecture.
 
-# Developed using Clean Architecture, MVVM, Hilt, Kotlin, Data Binding, Coroutines, LiveData and Flow
+![image](https://github.com/abdullahHanif/Explore/blob/master/explore_demo.png)
 
-![image](https://github.com/abdullahHanif/Explore/blob/master/explore_demo.jpg)
-
-# Architecture:Cancel changes
-Project is developed using Uncle bob's CLEAN ARCHITECTURE.
-
-Project is divided into three layers:
-1)Data
-2)Domain
-3)Presentation
-
-All three layer are divided in package level (simplest way to demonstrate the clean architecture.)
-
-# Data
-Data layer is responsible to provide data either from network or from local database.
-Data layer is designed in REPOSITORY PATTERN
-Data layer uses power of kotlin's coroutines,flow,room and retrofit
-
-# Domain
-Domain layer is where the core business logic of the application is defined.
-Domain layer has all the use cases of the system.
-Domain layer has the abstraction of each repositories. 
-
-# Presentation
-Presentation layer is the core applicatin where all activities and fragments are created.
-Presentation layer uses google's recommended MVVM pattern.
-Presentation layer uses google architectural libraries
+Libraries and pattern used in this project
+------------------------------------
+* AppCompat, AndroidX, RecyclerView, Glide, DesignLibrary, Paginate, Imageviewer
+* Kotlin Coroutines, Kotlin Flow, Retrofit, OkHttp
+* Dagger- Hilt
+* LiveData Viewmodel, Room
+* Repository Pattern
+* Junit,Mockito
 
 
+Do you want to contribute?
+--------------------------
+
+Feel free to report or add any useful feature, I will be glad to improve it with your help.
+https://github.com/abdullahHanif/Explore/issues
+
+
+Developed By
+------------
+
+* Abdullah Hanif - <abdullah.mamjee@gmail.com>
+
+License
+-------
+
+    Copyright 2021 Abdullah Hanif
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
 
