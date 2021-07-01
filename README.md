@@ -30,3 +30,6 @@ Presentation layer is the core applicatin where all activities and fragments are
 Presentation layer uses google's recommended MVVM pattern.
 Presentation layer uses google architectural libraries
 
+![image](https://github.com/abdullahHanif/Explore/blob/master/screenshot_1.png)
+![image](https://github.com/abdullahHanif/Explore/blob/master/screenshot_2.png)
+
