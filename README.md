@@ -3,7 +3,7 @@
 Example Android Clean Architecture used to explain how to use this architecture (rules) in our android applications.
 This example was created to demostrate and explaining about how to architect an android application using Uncle Bob's clean architecture.
 
-![image](https://github.com/abdullahHanif/Explore/blob/master/explore_demo.png)
+![image](https://github.com/abdullahHanif/Explore/blob/master/explore_demo.jpg)
 
 Libraries and pattern used in this project
 ------------------------------------
